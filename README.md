@@ -1,59 +1,233 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel Domain-Driven Design (DDD) Boilerplate
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This repository provides a clean, opinionated **Domain-Driven Design (DDD)** architecture implemented on top of **Laravel 12**, powered by **FrankenPHP** for a modern, high-performance PHP runtime.
 
-## About Laravel
+It is designed for engineers who want to move beyond traditional Laravel MVC and adopt a more scalable, maintainable, and explicit domain architecture.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📚 Table of Contents
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* [Overview](#overview)
+* [Key Features](#key-features)
+* [Architecture Structure](#architecture-structure)
+* [Why DDD?](#why-ddd)
+* [FrankenPHP Integration](#frankenphp-integration)
+* [API Response Format](#api-response-format)
+* [Testing & Coverage](#testing--coverage)
+* [Running Tests](#running-tests)
+* [Perfect For](#perfect-for)
+* [License](#license)
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## 🔍 Overview
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+This boilerplate enforces clear separation between:
 
-## Laravel Sponsors
+* **Domain**
+* **Application**
+* **Infrastructure**
+* **Interface (HTTP)**
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+and aims to keep business rules pure while containing Laravel-specific code within the framework boundaries.
 
-### Premium Partners
+With the addition of **FrankenPHP**, the project benefits from:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+* Worker mode
+* Native caching
+* Faster boot time
+* Better performance than traditional PHP-FPM
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## ✨ Key Features
 
-## Code of Conduct
+### ✔ Pure Domain Layer (framework-free)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+* Domain Entities with explicit invariants
+* Strongly typed `ValueObjects`
+* Domain Services for business operations
+* Repository interfaces defined around domain needs
 
-## Security Vulnerabilities
+### ✔ Application Layer (Use Cases & DTOs)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+* Each workflow becomes an explicit **Use Case Handler**
+* DTOs map request input to domain values
+* Encapsulated logic that remains testable without Laravel
 
-## License
+### ✔ Infrastructure Layer (Persistence, Eloquent, Mappers)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+* Eloquent Models isolated under `Infrastructure/`
+* ORMs never leak into domain
+* Mappers handle conversion between Domain Entities ↔ Eloquent Models
+* Repository implementations fulfill domain-defined contracts
+
+### ✔ Interface Layer (HTTP Controllers, Requests, Resources)
+
+* Ultra-thin controllers using dependency injection
+* Form Requests handle validation
+* API Resources transform domain entities into JSON
+
+### ✔ Consistent API Response System
+
+All responses follow this structure:
+
+```json
+{
+  "success": true,
+  "message": "Users retrieved successfully.",
+  "data": [...],
+  "meta": {
+    "total": 10,
+    "count": 10,
+    "per_page": 15,
+    "current_page": 1,
+    "last_page": 1
+  }
+}
+```
+
+---
+
+## 🏛 Architecture Structure
+
+```
+app/
+  Domain/
+    User/
+      Entities/
+      ValueObjects/
+      Services/
+      Repositories/
+      Exceptions/
+
+  Application/
+    User/
+      DTO/
+      UseCases/
+
+  Infrastructure/
+    Persistence/
+      Eloquent/
+        Models/
+        Repositories/
+        Mappers/
+    Http/
+      Clients/
+
+  Interfaces/
+    Http/
+      Controllers/
+      Requests/
+      Resources/
+      Responses/
+```
+
+This structure keeps domain logic pure and infrastructure replaceable.
+
+---
+
+## 🎯 Why DDD?
+
+Traditional Laravel MVC encourages:
+
+* Fat controllers
+* Fat models
+* Tight coupling between domain & framework
+* Difficulty testing business rules
+
+This project solves those issues by:
+
+* Keeping **business logic in the domain**
+* Using **use cases** to express application flows
+* Making infrastructure (Eloquent, API clients) replaceable
+* Improving testability through pure domain logic
+
+Perfect for large codebases, microservices, or teams that need engineering discipline.
+
+---
+
+## ⚡ FrankenPHP Integration
+
+This project supports running Laravel using **FrankenPHP**, which provides:
+
+* Worker mode (Octane-like performance)
+* Built-in caching & session support
+* Faster request handling
+* Reduced bootstrapping overhead
+* Better memory efficiency
+
+### 🔧 Running Laravel via FrankenPHP
+
+Install frankenphp:
+
+```bash
+composer require laravel/octane
+```
+
+Run the app:
+
+```bash
+php artisan octane:install --server=frankenphp
+```
+
+This gives you a persistent worker with much better throughput than PHP-FPM. More config, please visit https://frankenphp.dev/docs/laravel/
+
+---
+
+## 🧪 Testing & Coverage
+
+The project includes:
+
+* **Feature tests** for API endpoints
+* **Unit tests** for Domain & Application layers
+* **Clover coverage** output for SonarQube
+
+### PHPUnit Coverage Example
+
+```bash
+composer test:coverage
+```
+
+Generates:
+
+```
+storage/logs/clover.xml
+```
+
+Which SonarQube can read for code coverage.
+
+---
+
+## 🧵 Running Tests
+
+Feature tests:
+
+```bash
+composer test
+```
+
+Coverage + reports:
+
+```bash
+composer test:coverage
+```
+
+---
+
+## 🚀 Perfect For
+
+* Large-scale Laravel applications
+* Microservices using PHP
+* Teams adopting DDD / Clean Architecture / Hexagonal
+* Developers moving to FrankenPHP for performance gains
+* Projects requiring long-term maintainability and testability
+
+---
+
+## 📜 License
+
+This project is open-source and available under the MIT license.
+
+---
