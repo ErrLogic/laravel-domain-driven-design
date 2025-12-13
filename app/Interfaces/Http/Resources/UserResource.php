@@ -3,6 +3,7 @@
 namespace App\Interfaces\Http\Resources;
 
 use App\Domain\User\Entities\User;
+use App\Interfaces\Http\Resources\Core\BaseResource;
 use Illuminate\Http\Request;
 
 class UserResource extends BaseResource

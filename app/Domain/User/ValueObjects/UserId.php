@@ -14,11 +14,6 @@ readonly class UserId
         }
     }
 
-    //    public static function generate(): self
-    //    {
-    //        return new self(Uuid::uuid7()->toString());
-    //    }
-
     public function value(): string
     {
         return $this->value;

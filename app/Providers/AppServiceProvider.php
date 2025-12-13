@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\Application\Security\PasswordHasher;
 use App\Domain\User\Repositories\UserRepositoryInterface;
 use App\Infrastructure\Persistence\Eloquent\Repositories\EloquentUserRepository;
+use App\Infrastructure\Security\LaravelPasswordHasher;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -14,6 +16,7 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->bind(abstract: UserRepositoryInterface::class, concrete: EloquentUserRepository::class);
+        $this->app->bind(abstract: PasswordHasher::class, concrete: LaravelPasswordHasher::class);
     }
 
     /**

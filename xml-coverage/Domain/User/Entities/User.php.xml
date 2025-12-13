@@ -1,0 +1,587 @@
+<?xml version="1.0"?>
+<phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
+  <file name="User.php" path="/Domain/User/Entities">
+    <totals>
+      <lines total="72" comments="0" code="72" executable="20" executed="17" percent="85.00"/>
+      <methods count="9" tested="8" percent="88.89"/>
+      <functions count="0" tested="0" percent="0"/>
+      <classes count="1" tested="0" percent="0.00"/>
+      <traits count="0" tested="0" percent="0"/>
+    </totals>
+    <class name="App\Domain\User\Entities\User" start="9" executable="20" executed="17" crap="9.27">
+      <namespace name="App\Domain\User\Entities"/>
+      <method name="__construct" signature="__construct(?App\Domain\User\ValueObjects\UserId $id, App\Domain\User\ValueObjects\UserName $name, App\Domain\User\ValueObjects\UserEmail $email, string $password)" start="11" end="16" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="create" signature="create(App\Domain\User\ValueObjects\UserName $name, App\Domain\User\ValueObjects\UserEmail $email, string $password): self" start="18" end="26" crap="1" executable="6" executed="6" coverage="100"/>
+      <method name="rename" signature="rename(App\Domain\User\ValueObjects\UserName $name): self" start="28" end="34" crap="1" executable="3" executed="3" coverage="100"/>
+      <method name="changeEmail" signature="changeEmail(App\Domain\User\ValueObjects\UserEmail $email): self" start="36" end="42" crap="2" executable="3" executed="0" coverage="0"/>
+      <method name="withId" signature="withId(App\Domain\User\ValueObjects\UserId $id): self" start="44" end="50" crap="1" executable="3" executed="3" coverage="100"/>
+      <method name="id" signature="id(): ?App\Domain\User\ValueObjects\UserId" start="52" end="55" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="name" signature="name(): App\Domain\User\ValueObjects\UserName" start="57" end="60" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="email" signature="email(): App\Domain\User\ValueObjects\UserEmail" start="62" end="65" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="password" signature="password(): string" start="67" end="70" crap="1" executable="1" executed="1" coverage="100"/>
+    </class>
+    <coverage>
+      <line nr="16">
+        <covered by="Tests\Unit\CreateUserHandlerTest::test_handle_saves_user_via_repository"/>
+        <covered by="Tests\Unit\EloquentUserRepositoryTest::test_save_and_find_by_id"/>
+        <covered by="Tests\Feature\UserApiTest::test_index_returns_paginated_users"/>
+        <covered by="Tests\Feature\UserApiTest::test_show_returns_single_user"/>
+        <covered by="Tests\Feature\UserApiTest::test_store_creates_user"/>
+        <covered by="Tests\Feature\UserApiTest::test_update_modifies_user"/>
+        <covered by="Tests\Feature\UserApiTest::test_delete_removes_user"/>
+      </line>
+      <line nr="20">
+        <covered by="Tests\Unit\CreateUserHandlerTest::test_handle_saves_user_via_repository"/>
+        <covered by="Tests\Unit\EloquentUserRepositoryTest::test_save_and_find_by_id"/>
+        <covered by="Tests\Feature\UserApiTest::test_store_creates_user"/>
+      </line>
+      <line nr="21">
+        <covered by="Tests\Unit\CreateUserHandlerTest::test_handle_saves_user_via_repository"/>
+        <covered by="Tests\Unit\EloquentUserRepositoryTest::test_save_and_find_by_id"/>
+        <covered by="Tests\Feature\UserApiTest::test_store_creates_user"/>
+      </line>
+      <line nr="30">
+        <covered by="Tests\Feature\UserApiTest::test_update_modifies_user"/>
+      </line>
+      <line nr="31">
+        <covered by="Tests\Feature\UserApiTest::test_update_modifies_user"/>
+      </line>
+      <line nr="33">
+        <covered by="Tests\Feature\UserApiTest::test_update_modifies_user"/>
+      </line>
+      <line nr="46">
+        <covered by="Tests\Unit\CreateUserHandlerTest::test_handle_saves_user_via_repository"/>
+        <covered by="Tests\Unit\EloquentUserRepositoryTest::test_save_and_find_by_id"/>
+        <covered by="Tests\Feature\UserApiTest::test_store_creates_user"/>
+      </line>
+      <line nr="47">
+        <covered by="Tests\Unit\CreateUserHandlerTest::test_handle_saves_user_via_repository"/>
+        <covered by="Tests\Unit\EloquentUserRepositoryTest::test_save_and_find_by_id"/>
+        <covered by="Tests\Feature\UserApiTest::test_store_creates_user"/>
+      </line>
+      <line nr="49">
+        <covered by="Tests\Unit\CreateUserHandlerTest::test_handle_saves_user_via_repository"/>
+        <covered by="Tests\Unit\EloquentUserRepositoryTest::test_save_and_find_by_id"/>
+        <covered by="Tests\Feature\UserApiTest::test_store_creates_user"/>
+      </line>
+      <line nr="54">
+        <covered by="Tests\Unit\CreateUserHandlerTest::test_handle_saves_user_via_repository"/>
+        <covered by="Tests\Unit\EloquentUserRepositoryTest::test_save_and_find_by_id"/>
+        <covered by="Tests\Feature\UserApiTest::test_index_returns_paginated_users"/>
+        <covered by="Tests\Feature\UserApiTest::test_show_returns_single_user"/>
+        <covered by="Tests\Feature\UserApiTest::test_store_creates_user"/>
+        <covered by="Tests\Feature\UserApiTest::test_update_modifies_user"/>
+      </line>
+      <line nr="59">
+        <covered by="Tests\Unit\EloquentUserRepositoryTest::test_save_and_find_by_id"/>
+        <covered by="Tests\Feature\UserApiTest::test_index_returns_paginated_users"/>
+        <covered by="Tests\Feature\UserApiTest::test_show_returns_single_user"/>
+        <covered by="Tests\Feature\UserApiTest::test_store_creates_user"/>
+        <covered by="Tests\Feature\UserApiTest::test_update_modifies_user"/>
+      </line>
+      <line nr="64">
+        <covered by="Tests\Unit\EloquentUserRepositoryTest::test_save_and_find_by_id"/>
+        <covered by="Tests\Feature\UserApiTest::test_index_returns_paginated_users"/>
+        <covered by="Tests\Feature\UserApiTest::test_show_returns_single_user"/>
+        <covered by="Tests\Feature\UserApiTest::test_store_creates_user"/>
+        <covered by="Tests\Feature\UserApiTest::test_update_modifies_user"/>
+      </line>
+      <line nr="69">
+        <covered by="Tests\Unit\EloquentUserRepositoryTest::test_save_and_find_by_id"/>
+        <covered by="Tests\Feature\UserApiTest::test_store_creates_user"/>
+        <covered by="Tests\Feature\UserApiTest::test_update_modifies_user"/>
+      </line>
+      <line nr="22">
+        <covered by="Tests\Unit\CreateUserHandlerTest::test_handle_saves_user_via_repository"/>
+        <covered by="Tests\Unit\EloquentUserRepositoryTest::test_save_and_find_by_id"/>
+        <covered by="Tests\Feature\UserApiTest::test_store_creates_user"/>
+      </line>
+      <line nr="23">
+        <covered by="Tests\Unit\CreateUserHandlerTest::test_handle_saves_user_via_repository"/>
+        <covered by="Tests\Unit\EloquentUserRepositoryTest::test_save_and_find_by_id"/>
+        <covered by="Tests\Feature\UserApiTest::test_store_creates_user"/>
+      </line>
+      <line nr="24">
+        <covered by="Tests\Unit\CreateUserHandlerTest::test_handle_saves_user_via_repository"/>
+        <covered by="Tests\Unit\EloquentUserRepositoryTest::test_save_and_find_by_id"/>
+        <covered by="Tests\Feature\UserApiTest::test_store_creates_user"/>
+      </line>
+      <line nr="25">
+        <covered by="Tests\Unit\CreateUserHandlerTest::test_handle_saves_user_via_repository"/>
+        <covered by="Tests\Unit\EloquentUserRepositoryTest::test_save_and_find_by_id"/>
+        <covered by="Tests\Feature\UserApiTest::test_store_creates_user"/>
+      </line>
+    </coverage>
+    <source>
+      <line no="1">
+        <token name="T_OPEN_TAG">&lt;?php</token>
+      </line>
+      <line no="2"/>
+      <line no="3">
+        <token name="T_NAMESPACE">namespace</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NAME_QUALIFIED">App\Domain\User\Entities</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="4"/>
+      <line no="5">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NAME_QUALIFIED">App\Domain\User\ValueObjects\UserEmail</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="6">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NAME_QUALIFIED">App\Domain\User\ValueObjects\UserId</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="7">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NAME_QUALIFIED">App\Domain\User\ValueObjects\UserName</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="8"/>
+      <line no="9">
+        <token name="T_CLASS">class</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">User</token>
+      </line>
+      <line no="10">
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="11">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">__construct</token>
+        <token name="T_OPEN_BRACKET">(</token>
+      </line>
+      <line no="12">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_PRIVATE">private</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_QUESTION_MARK">?</token>
+        <token name="T_STRING">UserId</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$id</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="13">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_PRIVATE">private</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">UserName</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$name</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="14">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_PRIVATE">private</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">UserEmail</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$email</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="15">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_PRIVATE">private</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_READONLY">readonly</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">string</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$password</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="16">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="17"/>
+      <line no="18">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STATIC">static</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">create</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">UserName</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$name</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">UserEmail</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$email</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">string</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$password</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">self</token>
+      </line>
+      <line no="19">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="20">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NEW">new</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">self</token>
+        <token name="T_OPEN_BRACKET">(</token>
+      </line>
+      <line no="21">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_STRING">id</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">null</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="22">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_STRING">name</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$name</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="23">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_STRING">email</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$email</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="24">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_STRING">password</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$password</token>
+      </line>
+      <line no="25">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="26">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="27"/>
+      <line no="28">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">rename</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">UserName</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$name</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">self</token>
+      </line>
+      <line no="29">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="30">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$clone</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CLONE">clone</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="31">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$clone</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">name</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$name</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="32"/>
+      <line no="33">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$clone</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="34">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="35"/>
+      <line no="36">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">changeEmail</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">UserEmail</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$email</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">self</token>
+      </line>
+      <line no="37">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="38">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$clone</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CLONE">clone</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="39">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$clone</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">email</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$email</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="40"/>
+      <line no="41">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$clone</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="42">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="43"/>
+      <line no="44">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">withId</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">UserId</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$id</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">self</token>
+      </line>
+      <line no="45">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="46">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$clone</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CLONE">clone</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="47">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$clone</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">id</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$id</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="48"/>
+      <line no="49">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$clone</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="50">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="51"/>
+      <line no="52">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">id</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_QUESTION_MARK">?</token>
+        <token name="T_STRING">UserId</token>
+      </line>
+      <line no="53">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="54">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">id</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="55">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="56"/>
+      <line no="57">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">name</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">UserName</token>
+      </line>
+      <line no="58">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="59">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">name</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="60">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="61"/>
+      <line no="62">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">email</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">UserEmail</token>
+      </line>
+      <line no="63">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="64">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">email</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="65">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="66"/>
+      <line no="67">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">password</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">string</token>
+      </line>
+      <line no="68">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="69">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">password</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="70">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="71">
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="72"/>
+    </source>
+  </file>
+</phpunit>

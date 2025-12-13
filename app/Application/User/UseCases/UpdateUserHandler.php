@@ -2,6 +2,7 @@
 
 namespace App\Application\User\UseCases;
 
+use App\Application\Security\PasswordHasher;
 use App\Application\User\DTO\UpdateUserDTO;
 use App\Domain\User\Entities\User;
 use App\Domain\User\Exceptions\UserNotFoundException;
@@ -13,7 +14,8 @@ use App\Domain\User\ValueObjects\UserName;
 readonly class UpdateUserHandler
 {
     public function __construct(
-        private UserRepositoryInterface $users
+        private UserRepositoryInterface $users,
+        private PasswordHasher $hasher
     ) {}
 
     public function handle(UpdateUserDTO $dto): User
@@ -37,7 +39,7 @@ readonly class UpdateUserHandler
                 $user->id(),
                 $user->name(),
                 $user->email(),
-                bcrypt($dto->password)
+                $this->hasher->hash($dto->password),
             );
         }
 

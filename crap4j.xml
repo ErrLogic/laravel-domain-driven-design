@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<crap_result>
+  <project/>
+  <timestamp>2025-12-13 10:08:52</timestamp>
+  <stats>
+    <name>Method Crap Stats</name>
+    <methodCount>61</methodCount>
+    <crapMethodCount>0</crapMethodCount>
+    <crapLoad>0</crapLoad>
+    <totalCrap>115.79</totalCrap>
+    <crapMethodPercent>0</crapMethodPercent>
+  </stats>
+  <methods>
+    <method>
+      <package>App\Application\User\DTO</package>
+      <className>App\Application\User\DTO\CreateUserDTO</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct(string $name, string $email, string $password)</methodSignature>
+      <fullMethod>__construct(string $name, string $email, string $password)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Application\User\DTO</package>
+      <className>App\Application\User\DTO\CreateUserDTO</className>
+      <methodName>fromRequest</methodName>
+      <methodSignature>fromRequest($request): self</methodSignature>
+      <fullMethod>fromRequest($request): self</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Application\User\DTO</package>
+      <className>App\Application\User\DTO\UpdateUserDTO</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct(string $id, ?string $name, ?string $email, ?string $password)</methodSignature>
+      <fullMethod>__construct(string $id, ?string $name, ?string $email, ?string $password)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Application\User\DTO</package>
+      <className>App\Application\User\DTO\UpdateUserDTO</className>
+      <methodName>fromRequest</methodName>
+      <methodSignature>fromRequest($request, string $id): self</methodSignature>
+      <fullMethod>fromRequest($request, string $id): self</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Application\User\UseCases</package>
+      <className>App\Application\User\UseCases\CreateUserHandler</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct(App\Domain\User\Repositories\UserRepositoryInterface $users, App\Application\Security\PasswordHasher $hasher)</methodSignature>
+      <fullMethod>__construct(App\Domain\User\Repositories\UserRepositoryInterface $users, App\Application\Security\PasswordHasher $hasher)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Application\User\UseCases</package>
+      <className>App\Application\User\UseCases\CreateUserHandler</className>
+      <methodName>handle</methodName>
+      <methodSignature>handle(App\Application\User\DTO\CreateUserDTO $dto): App\Domain\User\Entities\User</methodSignature>
+      <fullMethod>handle(App\Application\User\DTO\CreateUserDTO $dto): App\Domain\User\Entities\User</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Application\User\UseCases</package>
+      <className>App\Application\User\UseCases\DeleteUserHandler</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct(App\Domain\User\Repositories\UserRepositoryInterface $users)</methodSignature>
+      <fullMethod>__construct(App\Domain\User\Repositories\UserRepositoryInterface $users)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Application\User\UseCases</package>
+      <className>App\Application\User\UseCases\DeleteUserHandler</className>
+      <methodName>handle</methodName>
+      <methodSignature>handle(string $id): void</methodSignature>
+      <fullMethod>handle(string $id): void</fullMethod>
+      <crap>2.03</crap>
+      <complexity>2</complexity>
+      <coverage>80</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Application\User\UseCases</package>
+      <className>App\Application\User\UseCases\GetUserByIdHandler</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct(App\Domain\User\Repositories\UserRepositoryInterface $users)</methodSignature>
+      <fullMethod>__construct(App\Domain\User\Repositories\UserRepositoryInterface $users)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Application\User\UseCases</package>
+      <className>App\Application\User\UseCases\GetUserByIdHandler</className>
+      <methodName>handle</methodName>
+      <methodSignature>handle(string $id): App\Domain\User\Entities\User</methodSignature>
+      <fullMethod>handle(string $id): App\Domain\User\Entities\User</fullMethod>
+      <crap>2.06</crap>
+      <complexity>2</complexity>
+      <coverage>75</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Application\User\UseCases</package>
+      <className>App\Application\User\UseCases\GetUsersPaginatedHandler</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct(App\Domain\User\Repositories\UserRepositoryInterface $users)</methodSignature>
+      <fullMethod>__construct(App\Domain\User\Repositories\UserRepositoryInterface $users)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Application\User\UseCases</package>
+      <className>App\Application\User\UseCases\GetUsersPaginatedHandler</className>
+      <methodName>handle</methodName>
+      <methodSignature>handle(int $perPage): Illuminate\Contracts\Pagination\LengthAwarePaginator</methodSignature>
+      <fullMethod>handle(int $perPage): Illuminate\Contracts\Pagination\LengthAwarePaginator</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Application\User\UseCases</package>
+      <className>App\Application\User\UseCases\UpdateUserHandler</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct(App\Domain\User\Repositories\UserRepositoryInterface $users, App\Application\Security\PasswordHasher $hasher)</methodSignature>
+      <fullMethod>__construct(App\Domain\User\Repositories\UserRepositoryInterface $users, App\Application\Security\PasswordHasher $hasher)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Application\User\UseCases</package>
+      <className>App\Application\User\UseCases\UpdateUserHandler</className>
+      <methodName>handle</methodName>
+      <methodSignature>handle(App\Application\User\DTO\UpdateUserDTO $dto): App\Domain\User\Entities\User</methodSignature>
+      <fullMethod>handle(App\Application\User\DTO\UpdateUserDTO $dto): App\Domain\User\Entities\User</fullMethod>
+      <crap>8.79</crap>
+      <complexity>5</complexity>
+      <coverage>46.67</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Console\Commands</package>
+      <className>App\Console\Commands\MigrateWithDbCommand</className>
+      <methodName>handle</methodName>
+      <methodSignature>handle(): int</methodSignature>
+      <fullMethod>handle(): int</fullMethod>
+      <crap>12</crap>
+      <complexity>3</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Console\Commands</package>
+      <className>App\Console\Commands\MigrateWithDbCommand</className>
+      <methodName>createTemporaryPdo</methodName>
+      <methodSignature>createTemporaryPdo(array $config): PDO</methodSignature>
+      <fullMethod>createTemporaryPdo(array $config): PDO</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Domain\User\Entities</package>
+      <className>App\Domain\User\Entities\User</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct(?App\Domain\User\ValueObjects\UserId $id, App\Domain\User\ValueObjects\UserName $name, App\Domain\User\ValueObjects\UserEmail $email, string $password)</methodSignature>
+      <fullMethod>__construct(?App\Domain\User\ValueObjects\UserId $id, App\Domain\User\ValueObjects\UserName $name, App\Domain\User\ValueObjects\UserEmail $email, string $password)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Domain\User\Entities</package>
+      <className>App\Domain\User\Entities\User</className>
+      <methodName>create</methodName>
+      <methodSignature>create(App\Domain\User\ValueObjects\UserName $name, App\Domain\User\ValueObjects\UserEmail $email, string $password): self</methodSignature>
+      <fullMethod>create(App\Domain\User\ValueObjects\UserName $name, App\Domain\User\ValueObjects\UserEmail $email, string $password): self</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Domain\User\Entities</package>
+      <className>App\Domain\User\Entities\User</className>
+      <methodName>rename</methodName>
+      <methodSignature>rename(App\Domain\User\ValueObjects\UserName $name): self</methodSignature>
+      <fullMethod>rename(App\Domain\User\ValueObjects\UserName $name): self</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Domain\User\Entities</package>
+      <className>App\Domain\User\Entities\User</className>
+      <methodName>changeEmail</methodName>
+      <methodSignature>changeEmail(App\Domain\User\ValueObjects\UserEmail $email): self</methodSignature>
+      <fullMethod>changeEmail(App\Domain\User\ValueObjects\UserEmail $email): self</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Domain\User\Entities</package>
+      <className>App\Domain\User\Entities\User</className>
+      <methodName>withId</methodName>
+      <methodSignature>withId(App\Domain\User\ValueObjects\UserId $id): self</methodSignature>
+      <fullMethod>withId(App\Domain\User\ValueObjects\UserId $id): self</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Domain\User\Entities</package>
+      <className>App\Domain\User\Entities\User</className>
+      <methodName>id</methodName>
+      <methodSignature>id(): ?App\Domain\User\ValueObjects\UserId</methodSignature>
+      <fullMethod>id(): ?App\Domain\User\ValueObjects\UserId</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Domain\User\Entities</package>
+      <className>App\Domain\User\Entities\User</className>
+      <methodName>name</methodName>
+      <methodSignature>name(): App\Domain\User\ValueObjects\UserName</methodSignature>
+      <fullMethod>name(): App\Domain\User\ValueObjects\UserName</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Domain\User\Entities</package>
+      <className>App\Domain\User\Entities\User</className>
+      <methodName>email</methodName>
+      <methodSignature>email(): App\Domain\User\ValueObjects\UserEmail</methodSignature>
+      <fullMethod>email(): App\Domain\User\ValueObjects\UserEmail</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Domain\User\Entities</package>
+      <className>App\Domain\User\Entities\User</className>
+      <methodName>password</methodName>
+      <methodSignature>password(): string</methodSignature>
+      <fullMethod>password(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Domain\User\ValueObjects</package>
+      <className>App\Domain\User\ValueObjects\UserEmail</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct(string $value)</methodSignature>
+      <fullMethod>__construct(string $value)</fullMethod>
+      <crap>2.5</crap>
+      <complexity>2</complexity>
+      <coverage>50</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Domain\User\ValueObjects</package>
+      <className>App\Domain\User\ValueObjects\UserEmail</className>
+      <methodName>value</methodName>
+      <methodSignature>value(): string</methodSignature>
+      <fullMethod>value(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Domain\User\ValueObjects</package>
+      <className>App\Domain\User\ValueObjects\UserId</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct(string $value)</methodSignature>
+      <fullMethod>__construct(string $value)</fullMethod>
+      <crap>2.5</crap>
+      <complexity>2</complexity>
+      <coverage>50</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Domain\User\ValueObjects</package>
+      <className>App\Domain\User\ValueObjects\UserId</className>
+      <methodName>value</methodName>
+      <methodSignature>value(): string</methodSignature>
+      <fullMethod>value(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Domain\User\ValueObjects</package>
+      <className>App\Domain\User\ValueObjects\UserName</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct(string $value)</methodSignature>
+      <fullMethod>__construct(string $value)</fullMethod>
+      <crap>2.5</crap>
+      <complexity>2</complexity>
+      <coverage>50</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Domain\User\ValueObjects</package>
+      <className>App\Domain\User\ValueObjects\UserName</className>
+      <methodName>value</methodName>
+      <methodSignature>value(): string</methodSignature>
+      <fullMethod>value(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Infrastructure\Persistence\Eloquent\Mappers</package>
+      <className>App\Infrastructure\Persistence\Eloquent\Mappers\EloquentUserMapper</className>
+      <methodName>toDomain</methodName>
+      <methodSignature>toDomain(App\Infrastructure\Persistence\Eloquent\Models\UserModel $model): App\Domain\User\Entities\User</methodSignature>
+      <fullMethod>toDomain(App\Infrastructure\Persistence\Eloquent\Models\UserModel $model): App\Domain\User\Entities\User</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Infrastructure\Persistence\Eloquent\Repositories</package>
+      <className>App\Infrastructure\Persistence\Eloquent\Repositories\EloquentUserRepository</className>
+      <methodName>save</methodName>
+      <methodSignature>save(App\Domain\User\Entities\User $user): App\Domain\User\Entities\User</methodSignature>
+      <fullMethod>save(App\Domain\User\Entities\User $user): App\Domain\User\Entities\User</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Infrastructure\Persistence\Eloquent\Repositories</package>
+      <className>App\Infrastructure\Persistence\Eloquent\Repositories\EloquentUserRepository</className>
+      <methodName>findById</methodName>
+      <methodSignature>findById(App\Domain\User\ValueObjects\UserId $id): ?App\Domain\User\Entities\User</methodSignature>
+      <fullMethod>findById(App\Domain\User\ValueObjects\UserId $id): ?App\Domain\User\Entities\User</fullMethod>
+      <crap>2.01</crap>
+      <complexity>2</complexity>
+      <coverage>88.89</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Infrastructure\Persistence\Eloquent\Repositories</package>
+      <className>App\Infrastructure\Persistence\Eloquent\Repositories\EloquentUserRepository</className>
+      <methodName>paginate</methodName>
+      <methodSignature>paginate(int $perPage): Illuminate\Contracts\Pagination\LengthAwarePaginator</methodSignature>
+      <fullMethod>paginate(int $perPage): Illuminate\Contracts\Pagination\LengthAwarePaginator</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Infrastructure\Persistence\Eloquent\Repositories</package>
+      <className>App\Infrastructure\Persistence\Eloquent\Repositories\EloquentUserRepository</className>
+      <methodName>delete</methodName>
+      <methodSignature>delete(App\Domain\User\ValueObjects\UserId $id): void</methodSignature>
+      <fullMethod>delete(App\Domain\User\ValueObjects\UserId $id): void</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Infrastructure\Security</package>
+      <className>App\Infrastructure\Security\LaravelPasswordHasher</className>
+      <methodName>hash</methodName>
+      <methodSignature>hash(string $plain): string</methodSignature>
+      <fullMethod>hash(string $plain): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Interfaces\Http\Controllers</package>
+      <className>App\Interfaces\Http\Controllers\UserController</className>
+      <methodName>store</methodName>
+      <methodSignature>store(App\Interfaces\Http\Requests\CreateUserRequest $request, App\Application\User\UseCases\CreateUserHandler $handler): Illuminate\Http\JsonResponse</methodSignature>
+      <fullMethod>store(App\Interfaces\Http\Requests\CreateUserRequest $request, App\Application\User\UseCases\CreateUserHandler $handler): Illuminate\Http\JsonResponse</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Interfaces\Http\Controllers</package>
+      <className>App\Interfaces\Http\Controllers\UserController</className>
+      <methodName>update</methodName>
+      <methodSignature>update(App\Interfaces\Http\Requests\UpdateUserRequest $request, string $id, App\Application\User\UseCases\UpdateUserHandler $handler): Illuminate\Http\JsonResponse</methodSignature>
+      <fullMethod>update(App\Interfaces\Http\Requests\UpdateUserRequest $request, string $id, App\Application\User\UseCases\UpdateUserHandler $handler): Illuminate\Http\JsonResponse</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Interfaces\Http\Controllers</package>
+      <className>App\Interfaces\Http\Controllers\UserController</className>
+      <methodName>show</methodName>
+      <methodSignature>show(string $id, App\Application\User\UseCases\GetUserByIdHandler $handler): Illuminate\Http\JsonResponse</methodSignature>
+      <fullMethod>show(string $id, App\Application\User\UseCases\GetUserByIdHandler $handler): Illuminate\Http\JsonResponse</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Interfaces\Http\Controllers</package>
+      <className>App\Interfaces\Http\Controllers\UserController</className>
+      <methodName>index</methodName>
+      <methodSignature>index(Illuminate\Http\Request $request, App\Application\User\UseCases\GetUsersPaginatedHandler $handler): Illuminate\Http\JsonResponse</methodSignature>
+      <fullMethod>index(Illuminate\Http\Request $request, App\Application\User\UseCases\GetUsersPaginatedHandler $handler): Illuminate\Http\JsonResponse</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Interfaces\Http\Controllers</package>
+      <className>App\Interfaces\Http\Controllers\UserController</className>
+      <methodName>destroy</methodName>
+      <methodSignature>destroy(string $id, App\Application\User\UseCases\DeleteUserHandler $handler): Illuminate\Http\JsonResponse</methodSignature>
+      <fullMethod>destroy(string $id, App\Application\User\UseCases\DeleteUserHandler $handler): Illuminate\Http\JsonResponse</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Interfaces\Http\Middleware</package>
+      <className>App\Interfaces\Http\Middleware\ForceJsonResponse</className>
+      <methodName>handle</methodName>
+      <methodSignature>handle(Illuminate\Http\Request $request, Closure $next): Symfony\Component\HttpFoundation\Response</methodSignature>
+      <fullMethod>handle(Illuminate\Http\Request $request, Closure $next): Symfony\Component\HttpFoundation\Response</fullMethod>
+      <crap>3.03</crap>
+      <complexity>3</complexity>
+      <coverage>85.71</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Interfaces\Http\Requests</package>
+      <className>App\Interfaces\Http\Requests\CreateUserRequest</className>
+      <methodName>authorize</methodName>
+      <methodSignature>authorize(): bool</methodSignature>
+      <fullMethod>authorize(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Interfaces\Http\Requests</package>
+      <className>App\Interfaces\Http\Requests\CreateUserRequest</className>
+      <methodName>rules</methodName>
+      <methodSignature>rules(): array</methodSignature>
+      <fullMethod>rules(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Interfaces\Http\Requests</package>
+      <className>App\Interfaces\Http\Requests\UpdateUserRequest</className>
+      <methodName>authorize</methodName>
+      <methodSignature>authorize(): bool</methodSignature>
+      <fullMethod>authorize(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Interfaces\Http\Requests</package>
+      <className>App\Interfaces\Http\Requests\UpdateUserRequest</className>
+      <methodName>rules</methodName>
+      <methodSignature>rules(): array</methodSignature>
+      <fullMethod>rules(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Interfaces\Http\Resources\Core</package>
+      <className>App\Interfaces\Http\Resources\Core\BaseCollection</className>
+      <methodName>mapper</methodName>
+      <methodSignature>mapper($model)</methodSignature>
+      <fullMethod>mapper($model)</fullMethod>
+      <crap>0</crap>
+      <complexity>0</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Interfaces\Http\Resources\Core</package>
+      <className>App\Interfaces\Http\Resources\Core\BaseCollection</className>
+      <methodName>resourceClass</methodName>
+      <methodSignature>resourceClass(): string</methodSignature>
+      <fullMethod>resourceClass(): string</fullMethod>
+      <crap>0</crap>
+      <complexity>0</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Interfaces\Http\Resources\Core</package>
+      <className>App\Interfaces\Http\Resources\Core\BaseCollection</className>
+      <methodName>toArray</methodName>
+      <methodSignature>toArray($request): array</methodSignature>
+      <fullMethod>toArray($request): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Interfaces\Http\Resources\Core</package>
+      <className>App\Interfaces\Http\Resources\Core\BaseCollection</className>
+      <methodName>with</methodName>
+      <methodSignature>with($request): array</methodSignature>
+      <fullMethod>with($request): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Interfaces\Http\Resources\Core</package>
+      <className>App\Interfaces\Http\Resources\Core\BaseResource</className>
+      <methodName>unwrap</methodName>
+      <methodSignature>unwrap(mixed $value): mixed</methodSignature>
+      <fullMethod>unwrap(mixed $value): mixed</fullMethod>
+      <crap>3.33</crap>
+      <complexity>3</complexity>
+      <coverage>66.67</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Interfaces\Http\Resources\Core</package>
+      <className>App\Interfaces\Http\Resources\Core\BaseResource</className>
+      <methodName>map</methodName>
+      <methodSignature>map(array $fields): array</methodSignature>
+      <fullMethod>map(array $fields): array</fullMethod>
+      <crap>3.04</crap>
+      <complexity>3</complexity>
+      <coverage>83.33</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Interfaces\Http\Resources</package>
+      <className>App\Interfaces\Http\Resources\UserCollection</className>
+      <methodName>mapper</methodName>
+      <methodSignature>mapper($model): App\Domain\User\Entities\User</methodSignature>
+      <fullMethod>mapper($model): App\Domain\User\Entities\User</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Interfaces\Http\Resources</package>
+      <className>App\Interfaces\Http\Resources\UserCollection</className>
+      <methodName>resourceClass</methodName>
+      <methodSignature>resourceClass(): string</methodSignature>
+      <fullMethod>resourceClass(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Interfaces\Http\Resources</package>
+      <className>App\Interfaces\Http\Resources\UserResource</className>
+      <methodName>toArray</methodName>
+      <methodSignature>toArray(Illuminate\Http\Request $request): array</methodSignature>
+      <fullMethod>toArray(Illuminate\Http\Request $request): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Interfaces\Http\Responses</package>
+      <className>App\Interfaces\Http\Responses\ApiResponse</className>
+      <methodName>success</methodName>
+      <methodSignature>success(string $message, mixed $data, ?array $meta, int $status): Illuminate\Http\JsonResponse</methodSignature>
+      <fullMethod>success(string $message, mixed $data, ?array $meta, int $status): Illuminate\Http\JsonResponse</fullMethod>
+      <crap>3</crap>
+      <complexity>3</complexity>
+      <coverage>94.74</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Interfaces\Http\Responses</package>
+      <className>App\Interfaces\Http\Responses\ApiResponse</className>
+      <methodName>error</methodName>
+      <methodSignature>error(string $message, mixed $errors, int $status): Illuminate\Http\JsonResponse</methodSignature>
+      <fullMethod>error(string $message, mixed $errors, int $status): Illuminate\Http\JsonResponse</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Models</package>
+      <className>App\Models\User</className>
+      <methodName>casts</methodName>
+      <methodSignature>casts(): array</methodSignature>
+      <fullMethod>casts(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Providers</package>
+      <className>App\Providers\AppServiceProvider</className>
+      <methodName>register</methodName>
+      <methodSignature>register(): void</methodSignature>
+      <fullMethod>register(): void</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>App\Providers</package>
+      <className>App\Providers\AppServiceProvider</className>
+      <methodName>boot</methodName>
+      <methodSignature>boot(): void</methodSignature>
+      <fullMethod>boot(): void</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+  </methods>
+</crap_result>
