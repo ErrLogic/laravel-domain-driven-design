@@ -8,16 +8,17 @@ It is designed for engineers who want to move beyond traditional Laravel MVC and
 
 ## 📚 Table of Contents
 
-* [Overview](#overview)
-* [Key Features](#key-features)
-* [Architecture Structure](#architecture-structure)
-* [Why DDD?](#why-ddd)
-* [FrankenPHP Integration](#frankenphp-integration)
-* [API Response Format](#api-response-format)
-* [Testing & Coverage](#testing--coverage)
-* [Running Tests](#running-tests)
-* [Perfect For](#perfect-for)
-* [License](#license)
+* [Overview](#-table-of-contents)
+* [Key Features](#-key-features)
+* [Architecture Structure](#-architecture-structure)
+* [Why DDD?](#-why-ddd)
+* [FrankenPHP Integration](#-frankenphp-integration)
+* [API Response Format](#-consistent-api-response-system)
+* [Code Quality & Static Analysis](#-code-quality--static-analysis)
+* [Testing & Coverage](#-testing--coverage)
+* [Running Tests](#-running-tests)
+* [Perfect For](#-perfect-for)
+* [License](#-license)
 
 ---
 
@@ -173,6 +174,29 @@ php artisan octane:install --server=frankenphp
 ```
 
 This gives you a persistent worker with much better throughput than PHP-FPM. More config, please visit https://frankenphp.dev/docs/laravel/
+
+---
+
+## 🧪 Code Quality & Static Analysis
+
+This project has been designed with **code quality and maintainability** as first-class concerns.
+
+All core use cases, domain logic, and HTTP flows are covered by **unit tests and feature tests**, enabling reliable static analysis and long-term maintainability.
+
+### ✅ SonarQube Compliance
+
+The codebase has been successfully scanned using **SonarQube** with the following results:
+
+- No critical or blocker issues
+- No code smells in core Domain and Application layers
+- High test coverage on business-critical paths (Use Cases)
+- Clean separation of concerns aligned with DDD principles
+- Test coverage reports generated via PHPUnit (Clover format)
+
+The architecture intentionally avoids framework coupling in the Domain and Application layers, which results in:
+- Low cyclomatic complexity
+- High testability
+- Predictable behavior under static analysis tools
 
 ---
 
