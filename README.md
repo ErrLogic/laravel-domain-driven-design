@@ -211,13 +211,13 @@ The project includes:
 ### PHPUnit Coverage Example
 
 ```bash
-composer test:coverage
+php artisan test
 ```
 
 Generates:
 
 ```
-storage/logs/clover.xml
+storage/tests/clover.xml
 ```
 
 Which SonarQube can read for code coverage.
