@@ -16,7 +16,6 @@ It is designed for engineers who want to move beyond traditional Laravel MVC and
 * [API Response Format](#-consistent-api-response-system)
 * [Code Quality & Static Analysis](#-code-quality--static-analysis)
 * [Testing & Coverage](#-testing--coverage)
-* [Running Tests](#-running-tests)
 * [Perfect For](#-perfect-for)
 * [License](#-license)
 
