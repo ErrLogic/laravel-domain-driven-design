@@ -7,11 +7,11 @@ use App\Application\Auth\Contracts\TokenIssuer;
 use App\Application\Auth\DTO\LoginUserDTO;
 use App\Application\Auth\UseCases\LoginUserHandler;
 use App\Domain\User\Entities\User;
+use App\Domain\User\Exceptions\InvalidCredentialsException;
 use App\Domain\User\Repositories\UserRepositoryInterface;
 use App\Domain\User\ValueObjects\UserEmail;
 use App\Domain\User\ValueObjects\UserId;
 use App\Domain\User\ValueObjects\UserName;
-use App\Domain\User\Exceptions\InvalidCredentialsException;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 
