@@ -8,7 +8,7 @@ It is designed for engineers who want to move beyond traditional Laravel MVC and
 
 ## 📚 Table of Contents
 
-* [Overview](#-table-of-contents)
+* [Overview](#-overview)
 * [Key Features](#-key-features)
 * [Architecture Structure](#-architecture-structure)
 * [Why DDD?](#-why-ddd)
