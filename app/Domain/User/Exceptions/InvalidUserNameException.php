@@ -6,8 +6,8 @@ use DomainException;
 
 class InvalidUserNameException extends DomainException
 {
-    public function __construct(string $message = 'Invalid username')
+    public function __construct(string $message = 'Invalid username', int $code = 422)
     {
-        parent::__construct($message);
+        parent::__construct(message: $message, code: $code);
     }
 }

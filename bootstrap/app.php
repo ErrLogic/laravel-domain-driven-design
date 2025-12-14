@@ -103,7 +103,7 @@ return Application::configure(basePath: dirname(__DIR__))
                     case $e instanceof DomainException:
                         return $response->error(
                             message: $e->getMessage(),
-                            status: Response::HTTP_UNPROCESSABLE_ENTITY
+                            status: $e->getCode() ?? Response::HTTP_UNPROCESSABLE_ENTITY
                         );
 
                     default:

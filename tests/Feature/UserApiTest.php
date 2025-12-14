@@ -11,6 +11,12 @@ class UserApiTest extends TestCase
 {
     use RefreshDatabase;
 
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $this->withoutMiddleware();
+    }
+
     public function test_index_returns_paginated_users()
     {
         User::factory()->count(3)->create();
@@ -80,6 +86,6 @@ class UserApiTest extends TestCase
         $response = $this->deleteJson("/api/users/{$user->id}");
 
         $response->assertStatus(200);
-        $this->assertDatabaseMissing('users', ['id' => $user->id]);
+        $this->assertSoftDeleted('users', ['id' => $user->id]);
     }
 }

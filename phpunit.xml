@@ -20,13 +20,13 @@
 
     <coverage includeUncoveredFiles="false" pathCoverage="false" ignoreDeprecatedCodeUnits="true" disableCodeCoverageIgnore="true">
         <report>
-            <clover outputFile="clover.xml"/>
-            <cobertura outputFile="cobertura.xml"/>
-            <crap4j outputFile="crap4j.xml" threshold="50"/>
-            <html outputDirectory="html-coverage" lowUpperBound="50" highLowerBound="90"/>
-            <php outputFile="coverage.php"/>
-            <text outputFile="coverage.txt" showUncoveredFiles="false" showOnlySummary="true"/>
-            <xml outputDirectory="xml-coverage"/>
+            <clover outputFile="storage/tests/clover.xml"/>
+            <cobertura outputFile="storage/tests/cobertura.xml"/>
+            <crap4j outputFile="storage/tests/crap4j.xml" threshold="50"/>
+            <html outputDirectory="storage/tests/html-coverage" lowUpperBound="50" highLowerBound="90"/>
+            <php outputFile="storage/tests/coverage.php"/>
+            <text outputFile="storage/tests/coverage.txt" showUncoveredFiles="false" showOnlySummary="true"/>
+            <xml outputDirectory="storage/tests/xml-coverage"/>
         </report>
     </coverage>
 
