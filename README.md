@@ -208,7 +208,7 @@ The project includes:
 * **Unit tests** for Domain & Application layers
 * **Clover coverage** output for SonarQube
 
-### PHPUnit Coverage Example
+### Test with Coverage Example
 
 ```bash
 php artisan test
@@ -221,22 +221,6 @@ storage/tests/clover.xml
 ```
 
 Which SonarQube can read for code coverage.
-
----
-
-## 🧵 Running Tests
-
-Feature tests:
-
-```bash
-composer test
-```
-
-Coverage + reports:
-
-```bash
-composer test:coverage
-```
 
 ---
 
