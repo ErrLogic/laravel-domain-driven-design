@@ -2,7 +2,7 @@
 
 namespace App\Application\User\UseCases;
 
-use App\Application\Security\PasswordHasher;
+use App\Application\User\Contracts\PasswordHasher;
 use App\Application\User\DTO\CreateUserDTO;
 use App\Domain\User\Entities\User;
 use App\Domain\User\Repositories\UserRepositoryInterface;

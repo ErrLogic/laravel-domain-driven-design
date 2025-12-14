@@ -2,7 +2,7 @@
 
 namespace Tests\Unit;
 
-use App\Application\Security\PasswordHasher;
+use App\Application\User\Contracts\PasswordHasher;
 use App\Application\User\DTO\CreateUserDTO;
 use App\Application\User\UseCases\CreateUserHandler;
 use App\Domain\User\Entities\User;

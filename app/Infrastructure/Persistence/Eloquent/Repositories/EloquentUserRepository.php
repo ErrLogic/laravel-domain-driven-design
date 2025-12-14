@@ -61,4 +61,20 @@ class EloquentUserRepository implements UserRepositoryInterface
 
         $model?->delete();
     }
+
+    public function findByEmail(UserEmail $email): ?DomainUser
+    {
+        $model = UserModel::where('email', $email->value())->first();
+
+        if (! $model) {
+            return null;
+        }
+
+        return new DomainUser(
+            new UserId($model->id),
+            new UserName($model->name),
+            new UserEmail($model->email),
+            $model->password,
+        );
+    }
 }
