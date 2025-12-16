@@ -6,7 +6,7 @@ use App\Domain\User\ValueObjects\UserEmail;
 use App\Domain\User\ValueObjects\UserId;
 use App\Domain\User\ValueObjects\UserName;
 
-class User
+final class User
 {
     public function __construct(
         private ?UserId $id,

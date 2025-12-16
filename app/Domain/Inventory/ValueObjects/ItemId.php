@@ -1,16 +1,17 @@
 <?php
 
-namespace App\Domain\User\ValueObjects;
+namespace App\Domain\Inventory\ValueObjects;
 
-use App\Domain\User\Exceptions\InvalidUserIdException;
+use App\Domain\Inventory\Exceptions\InvalidItemIdException;
+use InvalidArgumentException;
 use Ramsey\Uuid\Uuid;
 
-readonly class UserId
+readonly class ItemId
 {
     public function __construct(private string $value)
     {
         if (! Uuid::isValid($value)) {
-            throw new InvalidUserIdException('Invalid user UUID');
+            throw new InvalidItemIdException('Invalid Item UUID');
         }
     }
 
